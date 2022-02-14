@@ -1,0 +1,334 @@
+@import '_variables.scss';
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin titulos($font-family, $font-size, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+}
+
+/*mobile pantalla pequeña*/
+@media only screen and (max-width: 425px){
+    .main{
+        height: 261px;
+        background-image: url(../img/pasta-ripiena-lacucinaitaliana-425.jpg);
+    }
+    .mainPagesmenu{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "entrada"
+        "principal"
+        "postre"
+        "celiaco"
+        "vegetaariano"
+        "bebida";
+
+        h3{
+            @include titulos('roboto''sans-serif', 1.5rem, black );
+        }
+        h4{
+            @include titulos('roboto' sans-serif, 16px, rgb(139, 138, 138) );
+        }
+        div{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+
+    } 
+
+    .historia{
+        flex-direction: column;
+    }
+    .texto__imagen__uno{
+        flex-direction: column;
+    }
+}
+
+/*mobile pantalla tablet*/
+@media only screen and (min-width: 425px){
+    .main{
+        height: 472px;
+        background-image: url(../img/pasta-ripiena-lacucinaitaliana-768.jpg);
+    }
+    .mainPagesmenu{
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "entrada"
+        "principal"
+        "postre"
+        "celiaco"
+        "vegetaariano"
+        "bebida";
+
+        h3{
+            @include titulos('roboto' sans-serif, 1.5rem, black );
+            text-align: center;
+        }
+        h4{
+            @include titulos('roboto' sans-serif, 16px, rgb(139, 138, 138) );
+        }
+        div{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+    }
+    
+    .texto__imagen__uno{
+        flex-direction: column;
+    }
+}
+
+/*mobile pantalla grande*/
+@media only screen and (min-width: 768px){
+    .main{
+        height: 629px;
+        background-image: url(../img/pasta-ripiena-lacucinaitaliana-1024.jpg);
+    }
+    .mainPagesmenu{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "entrada principal"
+        "celiaco vegetariano"
+        "postre bebida";
+
+        h3{
+            @include titulos('roboto'sans-serif, 1.5rem, black);
+            text-align: center;
+        }
+        h4{
+            @include titulos('roboto'sans-serif, 1.5rem, rgb(138, 139, 138) );
+        }
+        div{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+
+    }
+    
+    .historia{
+        margin: 20px;
+        padding: 10px;
+        display: $display;
+        flex-direction: column;
+
+        &__seccion__uno{
+            display: $display;
+            flex-direction: column;
+
+            .texto__imagen__uno{
+                display: $display;
+                flex-direction: row;
+            }
+        }
+    
+        &__seccion__dos{
+        display: $display;
+        flex-direction: column;
+
+            .texto__imagen__dos{
+                display: $display;
+                flex-direction: row-reverse;
+            }
+        }
+    
+        &__seccion__tres{
+            .titulo__tres{
+                text-align: right;
+            }
+            .texto__imagen__tres{
+                display: $display;
+                flex-direction: row;
+                padding: 10px;
+            }
+        }
+    }
+}
+/*pantalla 1024*/
+@media only screen and (min-width: 992px){
+    .mainPagesmenu{
+        padding: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "entrada principal postre"
+        "celiaco vegetariano bebida";
+        grid-row-gap: 20px;
+        text-align: center;   
+
+        h3{
+            @include titulos('Roboto' sans-serif, 1.5rem, black);
+            text-align: center;
+        }
+        h4{
+            @include titulos('roboto'sans-serif, 16px, rgb(138, 139, 139) );
+        }
+        div{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+    }
+    
+    .historia{
+        margin: 20px;
+        padding: 10px;
+        display: $display;
+        flex-direction: column;
+
+        &__seccion__uno{
+            display: $display;
+            flex-direction: column;
+
+            .texto__imagen__uno{
+                display: $display;
+                flex-direction: row;
+            }
+        }
+
+        &__seccion__dos{
+            display: $display;
+            flex-direction: column;
+            .texto__imagen__dos{
+                display: $display;
+                flex-direction: row-reverse;
+            }
+        }
+        &__seccion__tres{
+            .titulo__tres{
+                text-align: right;
+            }
+            .texto__imagen__tres{
+                display: $display;
+                flex-direction: row;
+                padding: 10px;
+            }
+        }
+    }  
+    
+}
+
+/*header*/
+
+.header{
+    ul{
+        li{
+            transition: 1s;
+        }
+        li:hover{
+            transform: scale(1.1, 1.1);
+        }
+    }
+    .d-flex{
+        transition: 1.5s;
+    }
+    .d-flex:hover{
+        transform: scale(1.3, 1.3);
+    }
+
+}
+
+
+
+/*main*/
+.main{
+    height: 884;
+    background-image: url(../img/pasta-ripiena-lacucinaitaliana-1440.jpg);
+}
+/*main sección menú*/
+main{
+    background-color:rgb(245, 244, 244);
+}
+.menu{
+    display: $display;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+
+    h2{
+        font-family: 'Roboto', sans-serif;
+    }
+}
+#linea{
+    height: 3px;
+    background-color: black;
+
+}
+.mainPagesmenu{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    div{
+        height: 500px;
+        background-color: white;
+        margin: 20px;
+    }
+    div img{
+        margin-bottom: 100px;
+        text-align: center center;
+        transition: 2s;
+    }
+    div img:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+
+.entrada{
+    grid-area: "entrada";
+}
+.principal{
+    grid-area: "principal";
+}
+.postre{
+    grid-area: "postre";
+}
+.celiaco{
+    grid-area: "celiaco";
+}
+.vegetariano{
+    grid-area: "vegetariano";
+}
+.bebida{
+    grid-area: "bebida";
+}
+
+
+/*footer*/
+.footer{
+    background-image: linear-gradient(to bottom, black, #3a3a3a);
+}
+
+.googleMap{
+    text-align: center;
+}
+.direccion{
+    .extend{
+        margin: 15px;
+        font-family: 'roboto', sans-serif;
+        font-size: 1.5rem;
+        color: black;
+    }
+    p{
+        @extend .extend;
+        color: rgb(138, 139, 139);
+    }
+    h4{
+        @extend .extend;
+    }
+    h5{
+        @extend .extend;
+    }
+}
+.formularioReserva{
+    border: solid black 1px;
+    background-color: blanchedalmond;
+}

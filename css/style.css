@@ -1,0 +1,245 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*mobile pantalla pequeña*/
+@media only screen and (max-width: 425px) {
+  .main {
+    height: 261px;
+    background-image: url(../img/pasta-ripiena-lacucinaitaliana-425.jpg); }
+  .mainPagesmenu {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "entrada"
+ "principal"
+ "postre"
+ "celiaco"
+ "vegetaariano"
+ "bebida"; }
+    .mainPagesmenu h3 {
+      font-family: "roboto" "sans-serif";
+      font-size: 1.5rem;
+      color: black; }
+    .mainPagesmenu h4 {
+      font-family: "roboto" sans-serif;
+      font-size: 16px;
+      color: #8b8a8a; }
+    .mainPagesmenu div {
+      background-color: whitesmoke;
+      padding: 10px; }
+  .historia {
+    flex-direction: column; }
+  .texto__imagen__uno {
+    flex-direction: column; } }
+
+/*mobile pantalla tablet*/
+@media only screen and (min-width: 425px) {
+  .main {
+    height: 472px;
+    background-image: url(../img/pasta-ripiena-lacucinaitaliana-768.jpg); }
+  .mainPagesmenu {
+    text-align: center;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "entrada"
+ "principal"
+ "postre"
+ "celiaco"
+ "vegetaariano"
+ "bebida"; }
+    .mainPagesmenu h3 {
+      font-family: "roboto" sans-serif;
+      font-size: 1.5rem;
+      color: black;
+      text-align: center; }
+    .mainPagesmenu h4 {
+      font-family: "roboto" sans-serif;
+      font-size: 16px;
+      color: #8b8a8a; }
+    .mainPagesmenu div {
+      background-color: whitesmoke;
+      padding: 10px; }
+  .texto__imagen__uno {
+    flex-direction: column; } }
+
+/*mobile pantalla grande*/
+@media only screen and (min-width: 768px) {
+  .main {
+    height: 629px;
+    background-image: url(../img/pasta-ripiena-lacucinaitaliana-1024.jpg); }
+  .mainPagesmenu {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "entrada principal"
+ "celiaco vegetariano"
+ "postre bebida"; }
+    .mainPagesmenu h3 {
+      font-family: "roboto" sans-serif;
+      font-size: 1.5rem;
+      color: black;
+      text-align: center; }
+    .mainPagesmenu h4 {
+      font-family: "roboto" sans-serif;
+      font-size: 1.5rem;
+      color: #8a8b8a; }
+    .mainPagesmenu div {
+      background-color: whitesmoke;
+      padding: 10px; }
+  .historia {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; }
+    .historia__seccion__uno {
+      display: flex;
+      flex-direction: column; }
+      .historia__seccion__uno .texto__imagen__uno {
+        display: flex;
+        flex-direction: row; }
+    .historia__seccion__dos {
+      display: flex;
+      flex-direction: column; }
+      .historia__seccion__dos .texto__imagen__dos {
+        display: flex;
+        flex-direction: row-reverse; }
+    .historia__seccion__tres .titulo__tres {
+      text-align: right; }
+    .historia__seccion__tres .texto__imagen__tres {
+      display: flex;
+      flex-direction: row;
+      padding: 10px; } }
+
+/*pantalla 1024*/
+@media only screen and (min-width: 992px) {
+  .mainPagesmenu {
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "entrada principal postre"
+ "celiaco vegetariano bebida";
+    grid-row-gap: 20px;
+    text-align: center; }
+    .mainPagesmenu h3 {
+      font-family: "Roboto" sans-serif;
+      font-size: 1.5rem;
+      color: black;
+      text-align: center; }
+    .mainPagesmenu h4 {
+      font-family: "roboto" sans-serif;
+      font-size: 16px;
+      color: #8a8b8b; }
+    .mainPagesmenu div {
+      background-color: whitesmoke;
+      padding: 10px; }
+  .historia {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; }
+    .historia__seccion__uno {
+      display: flex;
+      flex-direction: column; }
+      .historia__seccion__uno .texto__imagen__uno {
+        display: flex;
+        flex-direction: row; }
+    .historia__seccion__dos {
+      display: flex;
+      flex-direction: column; }
+      .historia__seccion__dos .texto__imagen__dos {
+        display: flex;
+        flex-direction: row-reverse; }
+    .historia__seccion__tres .titulo__tres {
+      text-align: right; }
+    .historia__seccion__tres .texto__imagen__tres {
+      display: flex;
+      flex-direction: row;
+      padding: 10px; } }
+
+/*header*/
+.header ul li {
+  transition: 1s; }
+
+.header ul li:hover {
+  transform: scale(1.1, 1.1); }
+
+.header .d-flex {
+  transition: 1.5s; }
+
+.header .d-flex:hover {
+  transform: scale(1.3, 1.3); }
+
+/*main*/
+.main {
+  height: 884;
+  background-image: url(../img/pasta-ripiena-lacucinaitaliana-1440.jpg); }
+
+/*main sección menú*/
+main {
+  background-color: #f5f4f4; }
+
+.menu {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center; }
+  .menu h2 {
+    font-family: 'Roboto', sans-serif; }
+
+#linea {
+  height: 3px;
+  background-color: black; }
+
+.mainPagesmenu {
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+  .mainPagesmenu div {
+    height: 500px;
+    background-color: white;
+    margin: 20px; }
+  .mainPagesmenu div img {
+    margin-bottom: 100px;
+    text-align: center center;
+    transition: 2s; }
+  .mainPagesmenu div img:hover {
+    transform: scale(1.1, 1.1); }
+
+.entrada {
+  grid-area: "entrada"; }
+
+.principal {
+  grid-area: "principal"; }
+
+.postre {
+  grid-area: "postre"; }
+
+.celiaco {
+  grid-area: "celiaco"; }
+
+.vegetariano {
+  grid-area: "vegetariano"; }
+
+.bebida {
+  grid-area: "bebida"; }
+
+/*footer*/
+.footer {
+  background-image: linear-gradient(to bottom, black, #3a3a3a); }
+
+.googleMap {
+  text-align: center; }
+
+.direccion .extend, .direccion p, .direccion h4, .direccion h5 {
+  margin: 15px;
+  font-family: 'roboto', sans-serif;
+  font-size: 1.5rem;
+  color: black; }
+
+.direccion p {
+  color: #8a8b8b; }
+
+.formularioReserva {
+  border: solid black 1px;
+  background-color: blanchedalmond; }
